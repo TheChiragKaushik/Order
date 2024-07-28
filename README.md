@@ -1,19 +1,17 @@
 ## Live Demo
 
-You can view the deployed application [here](https://yonotes.netlify.app/).
+You can view the deployed application [here](https://oneorder.netlify.app/).
 
-# Note Taking Application
+# Product Order List Application
 
-This note-taking application is a simple yet powerful tool for managing your notes. It ensures notes are never lost by storing them in the user's local storage. The app includes features such as CRUD operations, search functionality, pagination, and real-time editing.
+This Product Order List application allows users to select products, specify quantities, and review their orders. It also features text-to-speech functionality to read out the order details. 
 
 ## Features
 
-- **CRUD Operations**: Create, Read, Update, and Delete notes with an intuitive interface.
-- **Local Storage**: Notes are stored in the user's local storage, ensuring they persist across sessions.
-- **Responsive Design**: The app is fully responsive, providing an optimal experience on both desktop and mobile devices.
-- **Search Functionality**: Find notes quickly by searching their titles.
-- **Pagination**: Navigate through large sets of notes efficiently.
-- **Real-Time Editing**: Edit notes in real-time without navigating away.
+- **Product Selection**: Choose products and specify quantities.
+- **Order Review**: Display and review the order summary.
+- **Text-to-Speech**: Read out the order details using text-to-speech technology.
+- **Responsive Design**: The app is designed to work seamlessly on both desktop and mobile devices.
 
 ## Tech Stack
 
@@ -23,21 +21,23 @@ This note-taking application is a simple yet powerful tool for managing your not
 - **React Router**: For routing and navigation within the app.
 
 ## File Structure
+
 ```
 src/
 ├── components/
-│ ├── AddNote.jsx # Component for adding new notes
-│ ├── EditNote.jsx # Component for editing existing notes
+│ ├── NewOrder.jsx # Component for displaying and selecting products
+│ ├── ShowOrder.jsx # Component for displaying the order summary
+│ ├── WhatIsMyOrder.jsx # Component for text-to-speech functionality
 │ ├── Footer.jsx # Footer component for the application
-│ ├── Github.jsx # Component to display GitHub profile information (if applicable)
 │ ├── Navbar.jsx # Navigation bar component
-│ └── Notes.jsx # Component to list and manage notes
 ├── app/
 │ └── Store.js # Configuration of the Redux store
+├── api/
+│ └── index.js # Configuration of API
 ├── features/
-│ └── note/
-│ ├── localStorage.js # Manages the persistence of application state
-│ └── noteSlice.js # Handles the state management for notes
+│ └── order/
+│ ├── orderSlice.js # Handles the state management for orders
+│ └── textToSpeech.js # Manages text-to-speech functionality
 ├── index.css # Global CSS styles
 ├── App.jsx # Main application component that sets up routing and layout
 └── main.jsx # Entry point for the React application, including routing and Redux provider setup
@@ -47,11 +47,11 @@ src/
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/TheChiragKaushik/Notes-App.git
+   https://github.com/TheChiragKaushik/Order.git
 
 2. **Navigate to the Project Directory**
    ```bash
-   cd note-taking-app
+   cd Order
 
 3. **Install Dependencies**
    ```bash
